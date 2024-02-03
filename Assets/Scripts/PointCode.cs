@@ -18,6 +18,8 @@ public class PointCode : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        Destroy(other.gameObject);
+        // Debug.Log("Nameeeeeeeee"+ gameObject.name + gameObject.transform.position);
+        // Destroy(other.gameObject);
+        
     }
 }
