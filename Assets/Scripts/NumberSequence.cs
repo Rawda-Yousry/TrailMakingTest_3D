@@ -33,7 +33,7 @@ public class NumberSequence : MonoBehaviour
         Debug.Log("Enteredd");
         AddToList();
         Debug.Log(gameObject.transform.position);
-        Debug.Log("Nameeeeeeeee "+gameObject.name);
+        Debug.Log("Nameeeeeeeee "+ gameObject.name);
     }
 
     void AddToList(){
