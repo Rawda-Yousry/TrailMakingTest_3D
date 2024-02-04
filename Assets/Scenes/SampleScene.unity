@@ -407,7 +407,7 @@ GameObject:
   - component: {fileID: 32343650}
   - component: {fileID: 32343654}
   m_Layer: 0
-  m_Name: H
+  m_Name: h
   m_TagString: Number
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -554,7 +554,7 @@ GameObject:
   - component: {fileID: 54337064}
   - component: {fileID: 54337068}
   m_Layer: 0
-  m_Name: F
+  m_Name: f
   m_TagString: Number
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -908,7 +908,7 @@ GameObject:
   - component: {fileID: 208587786}
   - component: {fileID: 208587790}
   m_Layer: 0
-  m_Name: B
+  m_Name: b
   m_TagString: Number
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2130,7 +2130,7 @@ GameObject:
   - component: {fileID: 580625917}
   - component: {fileID: 580625921}
   m_Layer: 0
-  m_Name: A
+  m_Name: a
   m_TagString: Number
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2546,7 +2546,7 @@ GameObject:
   - component: {fileID: 612457295}
   - component: {fileID: 612457299}
   m_Layer: 0
-  m_Name: E
+  m_Name: e
   m_TagString: Number
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4215,7 +4215,7 @@ PrefabInstance:
       objectReference: {fileID: -610719562952928305, guid: b97d752e43c650b4497f84845fad0ed4, type: 3}
     - target: {fileID: 919132149155446097, guid: b5df0e0021540b6429f97ff9c9ad28d2, type: 3}
       propertyPath: m_Name
-      value: '12 '
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b5df0e0021540b6429f97ff9c9ad28d2, type: 3}
       propertyPath: m_TagString
@@ -4412,7 +4412,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.6
+  m_Radius: 0.54
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1033116046
 MeshRenderer:
@@ -5221,7 +5221,7 @@ GameObject:
   - component: {fileID: 1231937220}
   - component: {fileID: 1231937224}
   m_Layer: 0
-  m_Name: I
+  m_Name: i
   m_TagString: Number
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5368,7 +5368,7 @@ GameObject:
   - component: {fileID: 1236408125}
   - component: {fileID: 1236408129}
   m_Layer: 0
-  m_Name: D
+  m_Name: d
   m_TagString: Number
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5983,7 +5983,7 @@ GameObject:
   - component: {fileID: 1354118776}
   - component: {fileID: 1354118780}
   m_Layer: 0
-  m_Name: J
+  m_Name: j
   m_TagString: Number
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5998,7 +5998,7 @@ Transform:
   m_GameObject: {fileID: 1354118774}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -3.6946063, y: -0.2928527, z: 1}
+  m_LocalPosition: {x: -3.6946063, y: -0.3, z: 1}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7316,7 +7316,7 @@ GameObject:
   - component: {fileID: 1574420482}
   - component: {fileID: 1574420486}
   m_Layer: 0
-  m_Name: K
+  m_Name: k
   m_TagString: Number
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7875,7 +7875,7 @@ GameObject:
   - component: {fileID: 1650033055}
   - component: {fileID: 1650033059}
   m_Layer: 0
-  m_Name: G
+  m_Name: g
   m_TagString: Number
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8328,7 +8328,7 @@ GameObject:
   - component: {fileID: 1741234939}
   - component: {fileID: 1741234943}
   m_Layer: 0
-  m_Name: C
+  m_Name: c
   m_TagString: Number
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8626,7 +8626,7 @@ GameObject:
   - component: {fileID: 1829022104}
   - component: {fileID: 1829022108}
   m_Layer: 0
-  m_Name: L
+  m_Name: l
   m_TagString: Number
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9681,7 +9681,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 0
   serializedVersion: 3
-  m_Radius: 0.5
+  m_Radius: 0.6
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2086775354
 MeshRenderer:

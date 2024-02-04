@@ -27,7 +27,7 @@ public class LineDrawer : MonoBehaviour
             currentLine.positionCount = 2;
             currentLine.useWorldSpace = true;
 
-            currentLine.startWidth = 0.1f;  
+            currentLine.startWidth = 0.2f;  
             currentLine.endWidth = 0.1f;
 
             // Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
