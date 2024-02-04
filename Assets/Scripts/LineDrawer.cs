@@ -37,7 +37,7 @@ public class LineDrawer : MonoBehaviour
             linePositions.Add(new Vector3(endPosition.x, endPosition.y, endPosition.z));
 
             currentLine.SetPositions(linePositions.ToArray());
-            startPosition = new Vector3(endPosition.x, endPosition.y, 0f);
+            startPosition = new Vector3(endPosition.x, endPosition.y, endPosition.z);
         }
     }
 

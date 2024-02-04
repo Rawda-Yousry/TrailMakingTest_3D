@@ -20,20 +20,36 @@ public class NumberSequence : MonoBehaviour
     public static int numberCount = 0;
     public LineDrawer lineDrawer;
     string testType;
+    private float randomX, randomY;
+    private readonly float z = 0.6826904f;
 
     // public Timer timerScript;
 
+    void Start()
+    {
+        Randomize();
+    }
 
-    void OnMouseDown() {
-        AddToList();
+    void Randomize()
+    {
+        randomX = Random.Range(-6.0f, 4f);
+        randomY = Random.Range(0, 3.4f);
+        gameObject.transform.localPosition = new Vector3 (randomX, randomY, z);
     }
 
     void OnCollisionEnter(Collision other)
     {
-        Debug.Log("Enteredd");
-        AddToList();
-        Debug.Log(gameObject.transform.position);
-        Debug.Log("Nameeeeeeeee "+ gameObject.name);
+        if(other.gameObject.tag == "Number")
+        {
+            Randomize();
+        }
+        else if (other.gameObject.tag == "Point")
+        {
+            Debug.Log("Enteredd");
+            AddToList();
+            Debug.Log(gameObject.transform.position);
+            Debug.Log("Nameeeeeeeee "+ gameObject.name);
+        }
     }
 
     void AddToList(){
@@ -57,10 +73,10 @@ public class NumberSequence : MonoBehaviour
             bool isEqual;
             // testType = PlayerPrefs.GetString("TestType");
             // if(testType == "A"){
-                 isEqual = Enumerable.SequenceEqual(gameObjectList, Numbers);
+                //  isEqual = Enumerable.SequenceEqual(gameObjectList, Numbers);
             // }
             // else{
-            //      isEqual = Enumerable.SequenceEqual(gameObjectList, NumbersAndAlphabets);
+                 isEqual = Enumerable.SequenceEqual(gameObjectList, NumbersAndAlphabets);
             // }
 
             if (isEqual) {
