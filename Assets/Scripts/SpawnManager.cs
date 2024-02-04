@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     public GameObject[] prefabsToInstantiate;
-    private readonly float z = 0.6f;
+    private readonly float z = -2f;
     private int currentIndex = 0;
 
     void Start()
@@ -26,7 +26,6 @@ public class SpawnManager : MonoBehaviour
             yield return null;
         }
     }
-
     Vector3 GenerateRandomPosition(List<Vector3> usedPositions)
     {
         float randomX, randomY;
