@@ -48,6 +48,7 @@ public class NumberSequence : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
+        Debug.Log("Collided");
         if (other.gameObject.CompareTag("Number"))
         {
             Randomize();
