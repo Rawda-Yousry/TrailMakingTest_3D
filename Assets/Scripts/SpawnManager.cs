@@ -7,10 +7,12 @@ public class SpawnManager : MonoBehaviour
     public GameObject[] prefabsNumbersAndAlphabets, prefabsNumbers;
     private readonly float z = -1.21f;
     private int currentIndex = 0;
+    string testType;
 
     void Start()
     {
         StartCoroutine(InstantiatePrefabs());
+        testType = PlayerPrefs.GetString("TestType");
     }
 
     IEnumerator InstantiatePrefabs()
@@ -20,13 +22,19 @@ public class SpawnManager : MonoBehaviour
         while (currentIndex < prefabsNumbersAndAlphabets.Length)
         {
             Vector3 spawnPos = GenerateRandomPosition(usedPositions);
-            Instantiate(prefabsNumbersAndAlphabets[currentIndex], spawnPos, prefabsNumbersAndAlphabets[currentIndex].transform.rotation);
+            if (testType == "B")
+            {
+                Instantiate(prefabsNumbersAndAlphabets[currentIndex], spawnPos, prefabsNumbersAndAlphabets[currentIndex].transform.rotation);
+            }
+            else
+            {
+                Instantiate(prefabsNumbers[currentIndex], spawnPos, prefabsNumbers[currentIndex].transform.rotation);
+            }
             usedPositions.Add(spawnPos);
             currentIndex++;
             yield return null;
         }
     }
-
     Vector3 GenerateRandomPosition(List<Vector3> usedPositions)
     {
         float randomX, randomY;

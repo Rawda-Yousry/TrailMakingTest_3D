@@ -20,7 +20,7 @@ public class NumberSequence : MonoBehaviour
     // private GameObject[] prefabsToInstantiate;
     public static int numberCount = 0;
     public LineDrawer lineDrawer;
-    // string testType;
+    string testType;
     // private float randomX, randomY;
     // private readonly float z = 0.6f;
 
@@ -85,13 +85,13 @@ public class NumberSequence : MonoBehaviour
     void CheckAnswer()
     {
         bool isEqual;
-        // testType = PlayerPrefs.GetString("TestType");
-        // if(testType == "A"){
-        //  isEqual = Enumerable.SequenceEqual(gameObjectList, Numbers);
-        // }
-        // else{
+        testType = PlayerPrefs.GetString("TestType");
+        if(testType == "A"){
+         isEqual = Enumerable.SequenceEqual(gameObjectList, Numbers);
+        }
+        else{
         isEqual = Enumerable.SequenceEqual(gameObjectList, NumbersAndAlphabets);
-        // }
+        }
 
         if (isEqual)
         {
