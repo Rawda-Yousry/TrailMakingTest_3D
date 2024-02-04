@@ -21,13 +21,13 @@ public class NumberSequence : MonoBehaviour
     public LineDrawer lineDrawer;
     string testType;
     private float randomX, randomY;
-    private readonly float z = 0.6826904f;
+    private readonly float z = 0.6f;
 
     // public Timer timerScript;
 
     void Start()
     {
-        Randomize();
+        // Randomize();
     }
 
     void Randomize()
@@ -39,11 +39,11 @@ public class NumberSequence : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        if(other.gameObject.tag == "Number")
+        if(other.gameObject.CompareTag("Number"))
         {
             Randomize();
         }
-        else if (other.gameObject.tag == "Point")
+        else if (other.gameObject.CompareTag("Point"))
         {
             Debug.Log("Enteredd");
             AddToList();
