@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    public GameObject[] prefabsToInstantiate;
-    private readonly float z = -2f;
+    public GameObject[] prefabsNumbersAndAlphabets, prefabsNumbers;
+    private readonly float z = -1.21f;
     private int currentIndex = 0;
 
     void Start()
@@ -17,10 +17,10 @@ public class SpawnManager : MonoBehaviour
     {
         List<Vector3> usedPositions = new List<Vector3>();
 
-        while (currentIndex < prefabsToInstantiate.Length)
+        while (currentIndex < prefabsNumbersAndAlphabets.Length)
         {
             Vector3 spawnPos = GenerateRandomPosition(usedPositions);
-            Instantiate(prefabsToInstantiate[currentIndex], spawnPos, prefabsToInstantiate[currentIndex].transform.rotation);
+            Instantiate(prefabsNumbersAndAlphabets[currentIndex], spawnPos, prefabsNumbersAndAlphabets[currentIndex].transform.rotation);
             usedPositions.Add(spawnPos);
             currentIndex++;
             yield return null;
