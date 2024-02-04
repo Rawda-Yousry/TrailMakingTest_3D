@@ -16,26 +16,34 @@ public class NumberSequence : MonoBehaviour
                                                             "k", "12", "l", "13"
                                                           };
     private GameObject lastClickedObject;
+
+    // private GameObject[] prefabsToInstantiate;
     public static int numberCount = 0;
     public LineDrawer lineDrawer;
-    string testType;
-    private float randomX, randomY;
-    private readonly float z = 0.6f;
+    // string testType;
+    // private float randomX, randomY;
+    // private readonly float z = 0.6f;
 
-    int x = 0;
+    // int x = 0;
 
     // public Timer timerScript;
 
     void Start()
     {
-        Randomize();
+ //       Randomize();
+
     }
 
     void Randomize()
     {
-        randomX = Random.Range(-6.0f, 4f);
-        randomY = Random.Range(0, 3.4f);
-        gameObject.transform.localPosition = new Vector3(randomX, randomY, z);
+        // randomX = Random.Range(-6.0f, 4f);
+        // randomY = Random.Range(0, 3.4f);
+        // gameObject.transform.localPosition = new Vector3(randomX, randomY, z);
+        // randomX = Random.Range(-6.0f, 4f);
+        // randomY = Random.Range(0, 3.4f);
+        // Vector3 spawnPos = new(randomX, randomY, z);
+        // for (int i = 0; i < 25; i++)
+        //     Instantiate(prefabsToInstantiate[i], spawnPos, prefabsToInstantiate[i].transform.rotation);
     }
 
     void OnCollisionEnter(Collision other)
