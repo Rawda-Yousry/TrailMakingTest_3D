@@ -8,14 +8,6 @@ public class LineDrawer : MonoBehaviour
     private List<Vector3> linePositions = new List<Vector3>();
     private Vector3 startPosition;
 
-    void Update()
-    {
-        // if (Input.GetMouseButtonDown(0))
-        // {
-        //     StartNewLine();
-        // }
-    }
-
     public void StartNewLine(Vector3 position)
     {
         if (startPosition == new Vector3 (0f, 0f, 0f)){
@@ -30,7 +22,6 @@ public class LineDrawer : MonoBehaviour
             currentLine.startWidth = 0.06f;  
             currentLine.endWidth = 0.06f;
 
-            // Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector3 endPosition = position;
             linePositions.Clear();
             linePositions.Add(new Vector3(startPosition.x, startPosition.y, startPosition.z));

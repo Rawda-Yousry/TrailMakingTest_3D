@@ -20,48 +20,23 @@ public class NumberSequence : MonoBehaviour
                                                                         "11(Clone)", "k(Clone)", "12(Clone)", "l(Clone)", "13(Clone)"
                                                                         };
     private GameObject lastClickedObject;
-
-    // private GameObject[] prefabsToInstantiate;
     public static int numberCount = 0;
     public LineDrawer lineDrawer;
     string testType;
-    // private float randomX, randomY;
-    // private readonly float z = 0.6f;
-
-    // int x = 0;
-
     public Timer timerScript;
-
-    void Start()
-    {
-
-    }
-
-
 
     void OnCollisionEnter(Collision other)
     {
-        // Debug.Log("Collided");
-        // Debug.Log(gameObject.name + "-----------"+other.gameObject.name);
-        // if (other.gameObject.CompareTag("Number"))
-        // {
-        //     Randomize();
-        // }
-         if (other.gameObject.CompareTag("Point"))
+        if (other.gameObject.CompareTag("Point"))
         {
-            // Debug.Log("Enteredd");
             AddToList();
-            // Debug.Log(gameObject.transform.position);
-            // Debug.Log("Nameeeeeeeee " + gameObject.name);
         }
     }
 
     void AddToList()
     {
-        // Debug.Log("adddd");
         if (gameObject.CompareTag("Number") && (lastClickedObject != gameObject))
         {
-            // Debug.Log("adddd22222");
             lineDrawer.StartNewLine(gameObject.transform.position);
 
             gameObjectList.Add($"{gameObject.name}");
@@ -81,53 +56,30 @@ public class NumberSequence : MonoBehaviour
         bool isEqual;
         testType = PlayerPrefs.GetString("TestType");
         if(testType == "A"){
-         isEqual = Enumerable.SequenceEqual(gameObjectList, Numbers);
+            isEqual = Enumerable.SequenceEqual(gameObjectList, Numbers);
         }
         else{
-        isEqual = Enumerable.SequenceEqual(gameObjectList, NumbersAndAlphabets);
+            isEqual = Enumerable.SequenceEqual(gameObjectList, NumbersAndAlphabets);
         }
 
         if (isEqual)
         {
-            Debug.Log("Trueeee");
             Debug.Log(gameObjectList);
             Debug.Log(NumbersAndAlphabets);
-            for (int i = 0; i < 25; i++)
-            {
-                Debug.Log("object" + gameObjectList[i]);
-                Debug.Log("list" + NumbersAndAlphabets);
-            }
             LoadFinishScene(true);
-            // numberCount = 0;
         }
         else
         {
-            Debug.Log("Falseeee");
-            for (int i = 0; i < 25; i++)
-            {
-                Debug.Log("object " + gameObjectList[i]);
-                Debug.Log("list " + NumbersAndAlphabets[i]);
-            }
             LoadFinishScene(false);
-            // numberCount = 0;
         }
     }
 
     void LoadFinishScene(bool isCongrats)
     {
-
-        // SceneManager.LoadScene("Finish");
         string elapsedTime = timerScript.GetElapsedTime();
-
         PlayerPrefs.SetString("FinishTime", elapsedTime);
-
-        // bool isCongrats = Enumerable.SequenceEqual(gameObjectList, Numbers);
         PlayerPrefs.SetInt("IsCongrats", isCongrats ? 1 : 0);
-
         SceneManager.LoadScene("Finish Scene");
-
     }
-
-
 }
 

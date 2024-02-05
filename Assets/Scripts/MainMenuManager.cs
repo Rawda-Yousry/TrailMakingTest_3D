@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuManager : MonoBehaviour
 {
-    // Start is called before the first frame update
     public string test;
     void OnCollisionEnter(Collision other)
     {

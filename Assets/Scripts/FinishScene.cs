@@ -6,30 +6,20 @@ using TMPro;
 
 public class FinishScene : MonoBehaviour
 {
-    // Start is called before the first frame update
-     [SerializeField] 
-    TextMeshProUGUI resultText;
-
-    [SerializeField] 
-    TextMeshProUGUI levelText;
-
+    [SerializeField] TextMeshProUGUI resultText;
+    [SerializeField] TextMeshProUGUI levelText;
     private string test;
 
     void Start(){
-
         int isCongrats = PlayerPrefs.GetInt("IsCongrats", 0);
         string finishTime = PlayerPrefs.GetString("FinishTime", " ");
 
-
         if(isCongrats == 1){
-
             resultText.text = "Congratulations!" + " You've finished at\n " + finishTime;
             levelText.text = "Another Level";
-            
-
-
-        } else {
-
+        } 
+        else 
+        {
             resultText.text = "Try Again!" + " You've finished at\n  " + finishTime;
             levelText.text = "Try Again";
         }
@@ -42,31 +32,32 @@ public class FinishScene : MonoBehaviour
             Debug.Log("Level"); 
             test = "A";
             string testType = PlayerPrefs.GetString("TestType", " ");
-            if(testType == "A" && levelText.text == "Another Level" ){
-                test = "A";
+            if(testType == "A" && levelText.text == "Another Level" )
+            {
+                test = "B";
                 PlayerPrefs.SetString("TestType", test);
                 SceneManager.LoadScene("SampleScene");
-                PlayerPrefs.DeleteAll();
-                        
-            }else if(testType == "A" && levelText.text == "Try Again" ){
-
-                test = "A";
-                PlayerPrefs.SetString("TestType", test);
-                SceneManager.LoadScene("SampleScene");
-                PlayerPrefs.DeleteKey("FinishTime");
-                PlayerPrefs.DeleteKey("IsCongrats");
-
-            }else if(testType == "B" && levelText.text == "Try Again" ){
-            
+                PlayerPrefs.DeleteAll();            
+            }
+            else if(testType == "A" && levelText.text == "Try Again" )
+            {
                 test = "A";
                 PlayerPrefs.SetString("TestType", test);
                 SceneManager.LoadScene("SampleScene");
                 PlayerPrefs.DeleteKey("FinishTime");
                 PlayerPrefs.DeleteKey("IsCongrats");
-
 
             }
-            else{
+            else if(testType == "B" && levelText.text == "Try Again" )
+            {
+                test = "B";
+                PlayerPrefs.SetString("TestType", test);
+                SceneManager.LoadScene("SampleScene");
+                PlayerPrefs.DeleteKey("FinishTime");
+                PlayerPrefs.DeleteKey("IsCongrats");
+            }
+            else
+            {
                 test = "A";
                 PlayerPrefs.SetString("TestType", test);
                 SceneManager.LoadScene("SampleScene");
@@ -79,8 +70,6 @@ public class FinishScene : MonoBehaviour
             PlayerPrefs.DeleteAll();
         }
     }
-
-
 }
 
 

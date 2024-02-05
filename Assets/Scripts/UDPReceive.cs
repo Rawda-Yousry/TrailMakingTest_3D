@@ -19,40 +19,20 @@ public class UDPReceive : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("udpreceive......................");
-        
-        // Register a method to be called when a scene is loaded
         SceneManager.sceneLoaded += OnSceneLoaded;
-
-        // Start the receiving thread
         StartReceiving();
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        // Check the name of the loaded scene
-        // if (scene.name == "Main Menu")  // Replace with the actual name of your first scene
-        // {
-        //     // Stop receiving in the first scene
-        //     StopReceiving();
-        // }
-        // else if (scene.name == "SampleScene")  // Replace with the actual name of your second scene
-        // {
-            // Stop and wait before starting receiving in the second scene
-            StartCoroutine(StopAndStartReceiving(2f)); // Replace 2f with the desired delay in seconds
-            Debug.Log("Scene 222222");
-        // }
+        StartCoroutine(StopAndStartReceiving(2f));
     }
 
     IEnumerator StopAndStartReceiving(float delay)
     {
         StopReceiving();
         Debug.Log("Stopped receiving. Waiting for " + delay + " seconds...");
-
-        // Wait for the specified delay
         yield return new WaitForSeconds(delay);
-
-        // Start receiving in the second scene
         StartReceiving();
         Debug.Log("Started receiving in the second scene.");
     }
@@ -77,10 +57,8 @@ public class UDPReceive : MonoBehaviour
         }
     }
 
-    // Start receiving thread
     void StartReceiving()
     {
-        // Make sure to stop the existing thread before starting a new one
         StopReceiving();
 
         receiveThread = new Thread(new ThreadStart(ReceiveData));
@@ -88,7 +66,6 @@ public class UDPReceive : MonoBehaviour
         receiveThread.Start();
     }
 
-    // Stop receiving thread
     void StopReceiving()
     {
         if (client != null)
@@ -103,7 +80,6 @@ public class UDPReceive : MonoBehaviour
         }
     }
 
-    // Ensure that resources are cleaned up when the script is destroyed
     void OnDestroy()
     {
         StopReceiving();

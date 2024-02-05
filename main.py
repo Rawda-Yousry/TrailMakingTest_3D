@@ -24,6 +24,7 @@ while True:
         lmList = hand['lmList']
         for lm in lmList:
             data.extend([lm[0], height - lm[1], lm[2]])
+            ## 1 2 3 4 5 6 7 8
         
         # print(data)
         sock.sendto(str.encode(str(data)), serverAddressPort)

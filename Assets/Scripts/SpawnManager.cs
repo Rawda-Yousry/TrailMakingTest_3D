@@ -37,7 +37,6 @@ public class SpawnManager : MonoBehaviour
             yield return null;
         }
 
-        // Disable the SpawnManager component after instantiation
         this.enabled = false;
     }
 
@@ -45,7 +44,6 @@ public class SpawnManager : MonoBehaviour
     {
         float randomX, randomY;
         Vector3 spawnPos;
-
         do
         {
             randomX = Random.Range(-6.0f, 4f);

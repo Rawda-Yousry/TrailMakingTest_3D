@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class LineCode : MonoBehaviour
 {
-    // Start is called before the first frame update
     LineRenderer lineRenderer;
 
     public Transform origin;
@@ -17,7 +16,6 @@ public class LineCode : MonoBehaviour
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         lineRenderer.SetPosition(0, origin.position);
