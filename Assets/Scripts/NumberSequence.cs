@@ -124,7 +124,7 @@ public class NumberSequence : MonoBehaviour
         // bool isCongrats = Enumerable.SequenceEqual(gameObjectList, Numbers);
         PlayerPrefs.SetInt("IsCongrats", isCongrats ? 1 : 0);
 
-        SceneManager.LoadScene("Finish");
+        SceneManager.LoadScene("Finish Scene");
 
     }
 
