@@ -13,11 +13,13 @@ public class MainMenuManager : MonoBehaviour
         {
             test = "A";
             PlayerPrefs.SetString("TestType", test);
+            Debug.Log("Level 1");
         }
         else if (other.gameObject.name == "Level2")
         {
             test = "B";
             PlayerPrefs.SetString("TestType", test);
+            Debug.Log("Level 2");
         }
         SceneManager.LoadScene("SampleScene");
     }

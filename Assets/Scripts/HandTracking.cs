@@ -7,9 +7,15 @@ public class HandTracking : MonoBehaviour
     // Start is called before the first frame update
     public UDPReceive udpRecieve;
     public GameObject[] handPoints;
+
+    // void Awake()
+    // {
+    //     DontDestroyOnLoad(gameObject);
+    // }
+
     void Start()
     {
-
+        Debug.Log("handtracking..............");
     }
 
     // Update is called once per frame
